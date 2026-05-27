@@ -40,11 +40,18 @@
   background: url('../../assets/icons/arrow-top-right.svg') center / 70% no-repeat;
   border: var(--border);
   border-radius: 50%;
+  transition-duration: var(--transition-duration);
 }
 
 .button.transparent:hover {
   color: var(--color-dark);
-  background-color: var(--color-light-gray);
+  background-color: var(--color-light);
+}
+
+.button.transparent:hover::after {
+  border-color: transparent;
+  filter: invert(100%);
+  rotate: 45deg;
 }
 
 @media (max-width: 767px) {
